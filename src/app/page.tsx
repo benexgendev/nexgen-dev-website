@@ -89,7 +89,7 @@ export default function Home() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              What's Broken Today? 🤔
+              What&apos;s Broken Today? 🤔
             </motion.h2>
             <motion.div 
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
@@ -151,7 +151,7 @@ export default function Home() {
               variants={fadeInUp}
               transition={{ delay: 0.2 }}
             >
-              At NexgenDev, we don't just teach coding. We train you like a real engineer with:
+              At NexgenDev, we don&apos;t just teach coding. We train you like a real engineer with:
             </motion.p>
             <motion.div 
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12"
@@ -287,14 +287,14 @@ export default function Home() {
               className="text-4xl md:text-5xl font-bold mb-8 text-gray-800 dark:text-white"
               variants={fadeInUp}
             >
-              Projects You'll Build 🔥
+              Projects You&apos;ll Build 🔥
             </motion.h2>
             <motion.p 
               className="text-xl text-gray-600 dark:text-gray-300 mb-12"
               variants={fadeInUp}
               transition={{ delay: 0.2 }}
             >
-              Real projects that make recruiters go "WOW":
+              Real projects that make recruiters go &quot;WOW&quot;:
             </motion.p>
             <motion.div 
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
@@ -368,7 +368,7 @@ export default function Home() {
               variants={fadeInUp}
               transition={{ delay: 0.2 }}
             >
-              You'll never learn alone.
+              You&apos;ll never learn alone.
             </motion.p>
             <motion.div 
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
@@ -389,7 +389,7 @@ export default function Home() {
                     <CardContent className="p-6 text-center">
                       <motion.div 
                         className="text-3xl mb-3"
-                        animate={{ bounce: [0, -10, 0] }}
+                        animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
                       >
                         {item.icon}
@@ -460,11 +460,11 @@ export default function Home() {
                     className="text-lg text-gray-600 dark:text-gray-300 mb-6"
                     variants={fadeInUp}
                   >
-                    We know you're a student → you pay just ₹2,499/month.
+                    We know you&apos;re a student → you pay just ₹2,499/month.
                   </motion.p>
                   <motion.div variants={scaleIn}>
                     <Badge variant="outline" className="text-green-600 border-green-600 mb-4">
-                      👉 Cancel anytime. Stay as long as you're learning & building.
+                      👉 Cancel anytime. Stay as long as you&apos;re learning & building.
                     </Badge>
                   </motion.div>
                   <motion.p 
@@ -549,14 +549,14 @@ export default function Home() {
               className="text-4xl md:text-6xl font-bold mb-6"
               variants={fadeInUp}
             >
-              🔥 "Your B.Tech won't get you a job. Your skills will."
+              🔥 &quot;Your B.Tech won&apos;t get you a job. Your skills will.&quot;
             </motion.h2>
             <motion.p 
               className="text-xl md:text-2xl mb-12 text-gray-300"
               variants={fadeInUp}
               transition={{ delay: 0.2 }}
             >
-              👊 Let's build your career together. Every weekend. Every project. Every win.
+              👊 Let&apos;s build your career together. Every weekend. Every project. Every win.
             </motion.p>
             <motion.div
               variants={scaleIn}
@@ -576,7 +576,7 @@ export default function Home() {
               variants={fadeInUp}
               transition={{ delay: 0.6 }}
             >
-              Takes less than 2 mins. No risk, cancel anytime.
+              &quot;Takes less than 2 mins. No risk, cancel anytime.&quot;
             </motion.p>
             <motion.p 
               className="mt-4 text-lg font-semibold text-yellow-400"
@@ -587,7 +587,7 @@ export default function Home() {
                 transition: { duration: 2, repeat: Infinity }
               }}
             >
-              "Future you will thank present you for this decision."
+              &quot;Future you will thank present you for this decision.&quot;
             </motion.p>
           </div>
         </div>

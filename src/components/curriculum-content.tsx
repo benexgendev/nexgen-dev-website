@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { 
   Terminal, 
@@ -27,14 +28,13 @@ import {
   User,
   Briefcase,
   GitBranch as GithubIcon,
-  FileText,
-  BookOpen
+  FileText
 } from "lucide-react";
 
 interface CurriculumItem {
   title: string;
   category: string;
-  icon: any;
+  icon: React.ComponentType<{ className?: string; style?: React.CSSProperties }>;
   color: string;
   description?: string;
 }

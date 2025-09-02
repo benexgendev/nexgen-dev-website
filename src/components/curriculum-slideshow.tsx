@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, BookOpen, Code, Bot, Zap, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,7 +10,7 @@ interface CurriculumSlide {
   title: string;
   category: string;
   topics: string[];
-  icon: any;
+  icon: React.ComponentType<{ className?: string; style?: React.CSSProperties }>;
   color: string;
 }
 
@@ -162,7 +162,7 @@ export function CurriculumSlideshow() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.4 }}
                         >
-                          <h4 className="text-xl font-semibold text-white mb-4">What you'll learn:</h4>
+                          <h4 className="text-xl font-semibold text-white mb-4">What you&apos;ll learn:</h4>
                           <ul className="space-y-3">
                             {currentData.topics.map((topic, index) => (
                               <motion.li

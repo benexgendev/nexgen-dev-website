@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { MessageCircle, Heart, Star, CheckCircle2 } from "lucide-react";
 
 interface ChatMessage {
@@ -82,7 +82,7 @@ export function ChatMessages() {
     }
   }, [currentMessageIndex]);
 
-  const MessageBubble = ({ message, isLast }: { message: ChatMessage; isLast: boolean }) => {
+  const MessageBubble = ({ message }: { message: ChatMessage }) => {
     const isBishal = message.sender === "bishal";
     
     return (
@@ -170,7 +170,7 @@ export function ChatMessages() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Real conversations with students showing the personal guidance you'll receive
+            Real conversations with students showing the personal guidance you&apos;ll receive
           </motion.p>
         </div>
 
@@ -197,11 +197,10 @@ export function ChatMessages() {
             {/* Chat Messages */}
             <CardContent className="p-6 max-h-[600px] overflow-y-auto">
               <div className="space-y-1">
-                {visibleMessages.map((message, index) => (
+                {visibleMessages.map((message) => (
                   <MessageBubble 
                     key={message.id} 
                     message={message} 
-                    isLast={index === visibleMessages.length - 1}
                   />
                 ))}
                 

@@ -2,9 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Rocket, Menu, X, Link } from "lucide-react";
+import { Rocket, Menu, X } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

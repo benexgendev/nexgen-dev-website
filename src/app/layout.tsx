@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/navbar";
 
 const ubuntu = Ubuntu({
   weight: ['400', '700'],
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${ubuntu.className} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

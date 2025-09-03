@@ -3,13 +3,11 @@
 import { motion } from "framer-motion";
 import { Rocket } from "lucide-react";
 import { CTAButton } from "@/components/ui/cta-button";
+import { useWorkshop } from "@/contexts/workshop-context";
 import { fadeInUp, staggerContainer, ANIMATION_DELAYS, ANIMATION_DURATIONS } from "@/lib/animations";
-import { useExternalLink } from "@/hooks/useExternalLink";
-
-const WORKSHOP_REGISTRATION_URL = "https://forms.gle/z7ySqUuf8Vxodp5d7";
 
 export function HeroSection() {
-  const { openExternalLink } = useExternalLink();
+  const { openModal } = useWorkshop();
 
   return (
     <section className="backdrop-blur-xl text-white pt-30 md:pt-[150px] px-3 md:px-0">
@@ -63,7 +61,7 @@ export function HeroSection() {
           <div className="px-2 md:px-0">
             <CTAButton
               icon={Rocket}
-              onClick={() => openExternalLink(WORKSHOP_REGISTRATION_URL)}
+              onClick={openModal}
               delay={ANIMATION_DELAYS.long}
               fullWidth={true}
               className="sm:w-auto"

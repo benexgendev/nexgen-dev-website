@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import { WorkshopProvider } from "@/contexts/workshop-context";
+import { WorkshopModalProvider } from "@/components/workshop/workshop-modal-provider";
 
 const ubuntu = Ubuntu({
   weight: ['400', '700'],
@@ -23,8 +25,11 @@ export default function RootLayout({
       <body
         className={`${ubuntu.className} antialiased`}
       >
-        <Navbar />
-        {children}
+        <WorkshopProvider>
+          <Navbar />
+          {children}
+          <WorkshopModalProvider />
+        </WorkshopProvider>
       </body>
     </html>
   );

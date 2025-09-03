@@ -4,14 +4,12 @@ import { motion } from "framer-motion";
 import { Flame, Calendar, Users, Rocket } from "lucide-react";
 import { CTAButton } from "@/components/ui/cta-button";
 import { useWorkshopDate } from "@/hooks/useWorkshopDate";
-import { useExternalLink } from "@/hooks/useExternalLink";
+import { useWorkshop } from "@/contexts/workshop-context";
 import { ANIMATION_DELAYS } from "@/lib/animations";
-
-const WORKSHOP_REGISTRATION_URL = "https://forms.gle/z7ySqUuf8Vxodp5d7";
 
 export function WorkshopCTASection() {
   const { displayDate, fullDate, time, description } = useWorkshopDate();
-  const { openExternalLink } = useExternalLink();
+  const { openModal } = useWorkshop();
 
   return (
     <section className="py-8 md:py-16 lg:py-24 backdrop-blur-2xl">
@@ -85,7 +83,7 @@ export function WorkshopCTASection() {
             {/* CTA Button */}
             <CTAButton
               icon={Rocket}
-              onClick={() => openExternalLink(WORKSHOP_REGISTRATION_URL)}
+              onClick={openModal}
               delay={ANIMATION_DELAYS.long}
               fullWidth={true}
               size="lg"

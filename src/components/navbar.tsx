@@ -4,9 +4,11 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Rocket, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useWorkshop } from "@/contexts/workshop-context";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openModal } = useWorkshop();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -64,10 +66,7 @@ export function Navbar() {
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'linear-gradient(135deg, #F68A4E, #FF7F50)';
                 }}
-                // Open in new tab 
-                onClick={() => {
-                  window.open("https://forms.gle/z7ySqUuf8Vxodp5d7", "_blank");
-                }}
+                onClick={openModal}
               >
                 <Rocket className="w-4 h-4" />
                 Join Free Workshop
@@ -122,7 +121,8 @@ export function Navbar() {
                   boxShadow: '0 10px 25px rgba(246, 138, 78, 0.25)'
                 }}
                 onClick={() => {
-                  window.open("https://forms.gle/z7ySqUuf8Vxodp5d7", "_blank");
+                  openModal();
+                  setIsMenuOpen(false);
                 }}
               >
                 <Rocket className="w-4 h-4 mr-2" />

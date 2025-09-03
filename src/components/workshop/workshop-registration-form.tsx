@@ -73,7 +73,7 @@ export function WorkshopRegistrationForm({ isOpen, onClose }: WorkshopRegistrati
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-md">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 bg-black/60">
       <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto bg-gradient-to-br from-slate-900/90 via-slate-800/80 to-slate-900/90 backdrop-blur-2xl border border-white/20 rounded-xl sm:rounded-xl shadow-2xl overflow-hidden max-h-[95vh] overflow-y-auto">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-400/20 via-transparent to-transparent" />

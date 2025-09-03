@@ -114,7 +114,7 @@ export function WorkshopRegistrationForm({ isOpen, onClose }: WorkshopRegistrati
               value={formData.name}
               onChange={handleInputChange}
               required
-              placeholder="Enter your full name"
+              placeholder="Your full name"
               radius="lg"
               className="sm:h-12 sm:text-base"
             />
@@ -126,7 +126,7 @@ export function WorkshopRegistrationForm({ isOpen, onClose }: WorkshopRegistrati
               value={formData.phone}
               onChange={handleInputChange}
               required
-              placeholder="+91 9876543210"
+              placeholder="Your WhatsApp number"
               radius="lg"
               className="sm:h-12 sm:text-base"
             />

@@ -5,9 +5,11 @@ import { Rocket } from "lucide-react";
 import { CTAButton } from "@/components/ui/cta-button";
 import { useWorkshop } from "@/contexts/workshop-context";
 import { fadeInUp, staggerContainer, ANIMATION_DELAYS, ANIMATION_DURATIONS } from "@/lib/animations";
+import { useWorkshopDate } from "@/hooks/useWorkshopDate";
 
 export function HeroSection() {
   const { openModal } = useWorkshop();
+  const { displayDate, fullDate, time, description } = useWorkshopDate();
 
   return (
     <section className="backdrop-blur-xl text-white pt-30 md:pt-[150px] px-3 md:px-0">
@@ -53,9 +55,9 @@ export function HeroSection() {
             }}
           >
             Join NexgenDev — Career Accelerator for Passionate coders like You.
-            <span className="block mt-2 md:mt-3 font-medium text-sm sm:text-base md:text-lg lg:text-xl" style={{color: '#F68A4E'}}>
+            {/* <span className="block mt-2 md:mt-3 font-medium text-sm sm:text-base md:text-lg lg:text-xl" style={{color: '#F68A4E'}}>
               Learn coding, AI tools, automation, full-stack, and career skills by actually building projects.
-            </span>
+            </span> */}
           </motion.p>
           
           <div className="px-2 md:px-0">
@@ -68,6 +70,12 @@ export function HeroSection() {
             >
               Join FREE Workshop
             </CTAButton>
+          </div>
+          {/* add date and time */}
+          <div>
+            <p className="text-[10px] sm:text-base md:text-sm lg:text-sm mt-2 text-slate-200">
+              {fullDate} | {time}
+            </p>
           </div>
         </div>
       </motion.div>
